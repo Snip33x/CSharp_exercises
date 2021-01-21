@@ -1,0 +1,28 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		string znak;
+		Console.WriteLine("Podaj znak:");
+		znak = Console.ReadLine();
+		
+		
+		int x, j ;
+		Console.WriteLine("Podaj szerokość: ");
+		int szer = int.Parse(Console.ReadLine());
+		
+		int wys = szer;
+		
+		for (x = 0; x < wys; x++)
+		{			
+			for (j = 0; j < szer; j++)
+				Console.Write(znak);
+			
+			Console.WriteLine();
+			szer--;
+			
+		}		
+	}
+}
