@@ -1,0 +1,28 @@
+//Rextester.Program.Main is the entry point for your code. Don't change it.
+//Microsoft (R) Visual C# Compiler version 2.9.0.63208 (958f2354)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Wynik dodawania  to " + (a+b));
+            Console.WriteLine("Wynik odejmowania to " + (a-b)); // dwa nawiasy
+            Console.WriteLine("Wynik mnożenia to " + a*b);
+            Console.WriteLine("Wynik dzielenia to " + a/b);
+            Console.WriteLine("Wynik reszty z dzielenia to " + a%b);
+
+
+                 
+        }
+    }
+}
