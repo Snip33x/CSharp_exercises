@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		float distance;
+		float hour, min, sec;
+		
+		float timeSec;
+		float mps;
+		float kph, mph;
+		
+		float Vms, Vkms, Vmils;
+		
+		
+		Console.WriteLine("Podaj dystans przebyty w metrach: ");
+		distance = float.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj jednostkę godziny w jakiej przebyłeś tą dorgą: ");
+		hour = float.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj jednostkę minut w jakiej przebyłeś tą dorgą: ");
+		min = float.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj jednostkę sekund w jakiej przebyłeś tą dorgą: ");
+		sec = float.Parse(Console.ReadLine());
+		
+		timeSec = (hour * 3600) + (min * 60) + sec;
+		mps = distance / timeSec;
+		kph = (distance / 1000F) / (timeSec / 3600F);
+		mph = kph / 1.609f;
+		
+		Console.WriteLine("Speed in meters/sec is {0}", mps);
+		Console.WriteLine("Speed in km/h is {0}", kph);
+		Console.WriteLine("Speed in miles/h is {0}", mph);
+		
+
+	}
+	
+}
