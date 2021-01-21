@@ -1,0 +1,33 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int width, height;
+		int row, column;
+		int max;
+		
+		Console.WriteLine("Podaj znak:");
+		char symbol = char.Parse(Console.ReadLine());
+			
+		Console.WriteLine("Podaj szerokość: ");
+		height = int.Parse(Console.ReadLine());
+		width = 0 ;
+		max = height;
+		
+		for (row = 0; row < height; row++)
+		{
+			for (column = 0; column < width; column++)
+				Console.Write(" ");
+			
+			for (int asteriks = 0; asteriks < max; asteriks++)
+				Console.Write(symbol);
+			
+			Console.WriteLine();
+			width++;
+			max--;
+			
+		}	
+	}
+}
