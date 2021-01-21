@@ -1,0 +1,20 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		const float PI = 3.14F;
+		double surface;
+		double volume;
+		double radius;
+		
+		Console.WriteLine("Podaj promień: ");
+		radius = double.Parse(Console.ReadLine());
+		
+		surface = 4 * PI * Math.Pow(radius,2);
+		volume = 4 / 3 * PI * Math.Pow(radius,3);
+		
+		Console.WriteLine("Surface to: {0}, a volume to {1}", surface, volume);
+	}
+}
