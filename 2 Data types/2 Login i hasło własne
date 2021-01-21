@@ -1,0 +1,54 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string login = "user";
+		string password = "1234";
+
+		Console.WriteLine("Podaj Login:"); 
+		
+		string login_podany;
+		string password_podany;
+
+		while(true)
+		{
+			login_podany = Console.ReadLine();
+			if (login == login_podany)
+			{
+				Console.WriteLine("Prawidłowy login");
+				break;
+			}
+			else
+			{
+				Console.WriteLine("Login nie prawidłowy, podaj znowu");
+				continue;
+			}	
+		}	
+		
+		Console.WriteLine("Podaj hasło ");
+		
+		while(true)
+		{
+			password_podany = Console.ReadLine();
+			if (password == password_podany)
+			{
+				Console.WriteLine("Prawidłowe hasło");
+				break;
+			}
+			else
+			{
+				Console.WriteLine("hasło nie prawidłowe, podaj znowu");
+				continue;
+			}	
+		}	
+		
+		if (login == login_podany && password == password_podany)
+			Console.WriteLine("Zalogowano");
+			
+			
+	
+	
+	}
+}
