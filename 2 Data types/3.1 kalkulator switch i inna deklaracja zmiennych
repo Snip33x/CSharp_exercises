@@ -1,0 +1,46 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int  a, c;
+		char b;
+		
+		Console.WriteLine("Podaj pierwszą liczbę: ");
+		a = int.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj znak operacji");
+		b = char.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj drugą liczbę");
+		c = int.Parse(Console.ReadLine());
+		
+		switch (b)
+		{
+			case '+':
+				Console.WriteLine("wynik to : " + (a+c));
+				break;
+				
+			case '-':
+				Console.WriteLine("wynik to : " + (a-c));
+				break;				
+			
+			case '*':
+			case 'x':	
+				Console.WriteLine("wynik to : " + a*c);
+				break;		
+			
+			case '/':
+				Console.WriteLine("wynik to : " + a/c);
+				break;
+			
+			default:
+				Console.WriteLine("Wrong Char");
+				break;
+					
+		}
+		
+								
+	}
+}
