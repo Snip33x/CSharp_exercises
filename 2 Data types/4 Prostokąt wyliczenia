@@ -1,0 +1,30 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double a ,b;
+		double area, perimeter, diagonal;
+
+		
+		
+		Console.WriteLine("Podaj długość prostokąta: ");
+		a = double.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj wysokość prostokąta: ");
+		b = double.Parse(Console.ReadLine());
+		
+		
+		perimeter = 2*a + 2*b;
+		Console.WriteLine("Perimeter-obwód : {0}", perimeter);
+		
+		area = a*b;
+		Console.WriteLine("Area-pole : {0}", area);
+		
+		diagonal = Math.Sqrt(a*a + b*b);
+		Console.WriteLine("Diagonal -przekątna : {0}", diagonal);
+		
+
+	}
+}
