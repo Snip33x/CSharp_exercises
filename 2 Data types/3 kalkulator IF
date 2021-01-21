@@ -1,0 +1,36 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Podaj pierwszą liczbę: ");
+		int a = int.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj znak operacji");
+		char b = char.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj drugą liczbę");
+		int c = int.Parse(Console.ReadLine());
+		
+		if (b == '+')
+		{
+			
+			Console.WriteLine("wynik to : " + (a+c));
+		}
+		if (b == '-')
+		{
+			Console.WriteLine("wynik to : " + (a-c));
+		}
+		
+		if (b == '*')
+		{
+			Console.WriteLine("wynik to : " + a*c);
+		}
+		if (b == '/')
+		{
+			Console.WriteLine("wynik to : " + a/c);
+		}
+								
+	}
+}
