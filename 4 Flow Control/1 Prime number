@@ -20,4 +20,4 @@ public class Program
 		if (flag == 0)
 			Console.Write("Number is Prime.");
 	}
-}
+}// można dodać jeszcze jedną zmienną 'm' gdzie najpierw dzielimy n na dwa i przypisujemy do m - któro wrzucamy do pętli for jak górna granica - też będzie działać
