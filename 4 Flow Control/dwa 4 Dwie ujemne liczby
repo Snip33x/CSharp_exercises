@@ -1,0 +1,20 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int a, b;
+		
+		Console.WriteLine("Podaj pierwszą liczbę: ");
+		a = int.Parse(Console.ReadLine());
+		Console.WriteLine("Podaj pierwszą liczbę: ");
+		b = int.Parse(Console.ReadLine());
+		
+		if ( a < 0 && b < 0)
+			Console.WriteLine("Liczby są ujemne");
+		else
+			Console.WriteLine("Liczby nie są ujemne");
+		
+	}
+}
