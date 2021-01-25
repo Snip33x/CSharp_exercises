@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+	public class Program
+	{
+		public static void Main()
+		{
+			string user, pass;
+
+			int counter = 0;
+
+			do
+			{
+				
+				Console.WriteLine("Enter a username: ");
+				user = Console.ReadLine();
+
+				Console.WriteLine("Enter a password: ");
+				pass = Console.ReadLine();
+
+				if ((user != "user") || (pass != "1234"))
+                {
+					Console.WriteLine("Login error\n");
+					counter += 1;
+				}
+				if (counter == 3)
+                {
+                    Console.WriteLine("3 razy złe logowanie, nara ci");
+					break;
+				}
+					
+					
+
+			}
+			while ((user != "user") || (pass != "1234"));
+
+			if (user == "user" && pass == "1234")
+				Console.WriteLine("Zalogowano pomyślnie");
+			Console.ReadKey();
+		}
+	}
+}
