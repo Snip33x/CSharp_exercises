@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            int b = 0; // nieprzypisana zmienna lokalna jak nie było określone ile b ma wynosić
+
+            do
+            {
+                a = b * (3 * 5);
+                b++;
+                Console.Write(a + " ");
+            }
+            while (a < 495);
+
+            // teraz z apki
+            Console.WriteLine("\n\n tutaj z apki opcja");
+
+            int i;
+
+            for (i = 1; i <= 500; i++)
+            {
+                if ((i % 3 == 0) && (i % 5 == 0))
+                    Console.Write("{0} ", i);
+
+            }
+            
+            
+            
+            Console.ReadKey();
+        }   
+    }
+}
