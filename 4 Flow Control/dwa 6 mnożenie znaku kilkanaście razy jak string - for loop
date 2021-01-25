@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, amount;
+            int i;
+
+            Console.WriteLine("Podaj znak do powtórzenia");
+            num = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Podaj ile razy ma być powtórzona");
+            amount = int.Parse(Console.ReadLine());
+
+            for (i = 0; i < amount; i++)
+            {
+                Console.Write(num);
+            }
+            Console.ReadKey();
+        }   
+    }
+}
