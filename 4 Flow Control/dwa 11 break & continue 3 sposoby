@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            for (int i = 10; i <= 20; i += 2)
+            {
+                if (i == 16)
+                    continue;
+                Console.Write(i + " ");
+            }
+
+            Console.WriteLine("\n");
+            for (int i = 5; i <= 10; i++)
+            {
+                if (2 * i == 16)
+                    continue;
+                Console.Write(2 * i + " ");
+            }
+            Console.WriteLine("\n");
+            int count = 10;
+            while (true)
+            {
+                Console.Write(count + " ");
+                count += 2;
+                
+                if (count == 16)
+                    continue;
+
+                if (count == 20)
+                    break;              
+            }
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
