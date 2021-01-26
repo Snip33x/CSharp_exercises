@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int num1, num2;
+
+
+            Console.WriteLine("Podaj dolny zakres: ");
+            num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Podaj górny zakres: ");
+            num2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nPierwsza pętla for\n");
+
+            for (int i = num1; i <= num2; i++)
+            {
+                Console.Write(i + " ");
+            }
+
+            Console.WriteLine("\nDruga pętla while\n");
+
+            int numwhile = num1;
+            while (numwhile <= num2)
+            {
+                Console.Write(numwhile + " ");
+                numwhile += 1;
+            }
+
+            Console.WriteLine("\nTrzecia pętla do while\n");
+
+
+            int numdo = num1;
+            do
+            {
+                Console.Write(numdo + " ");
+                numdo += 1;
+                
+
+            } while (numdo <= num2);
+
+            Console.ReadKey();
+
+        }
+    }
+}
