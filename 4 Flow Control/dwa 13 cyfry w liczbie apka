@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+
+            int number;
+            int digit = 0;
+
+            Console.WriteLine("Enter a number: ");
+            number = int.Parse(Console.ReadLine());
+
+            if (number < 0)
+            {
+                Console.WriteLine("Uwaga jest to liczba ujemna");
+                number = -number;
+            }
+
+            while (number>0)
+            {
+                number = number / 10;
+                digit++;
+            }
+            if (digit == 0)
+                digit = 1;
+            
+            Console.WriteLine("{0} digits", digit);
+            Console.ReadKey();
+
+        }
+    }
+}
