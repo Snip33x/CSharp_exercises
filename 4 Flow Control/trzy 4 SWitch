@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("Podaj ocenę: ");
+            int ocena = int.Parse(Console.ReadLine());
+
+            //można bez problemu zaczynać od górnych wartości, ja tu tak zrobiłem bo wcześniej nie robiłem podwójnych zakresów od do 
+            if (ocena <= 4 && ocena >= 0)
+                Console.WriteLine("Fail");
+            else if (ocena == 5)
+                Console.WriteLine("Pass");
+            else if (ocena == 6)
+                Console.WriteLine("Good");
+            else if (ocena <= 8 && ocena >= 7)
+                Console.WriteLine("Notable");
+            else if (ocena <= 10 && ocena >= 9)
+                Console.WriteLine("Excellent");
+            else
+                Console.WriteLine("Nieprawidłowa wartość");
+
+            switch (ocena)
+            {
+
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    Console.WriteLine("fail");
+                    break;
+                case 5:
+                    Console.WriteLine("pass");
+                    break;
+                case 6:
+                    Console.WriteLine("good");
+                    break;
+                case 7:
+                case 8:
+                    Console.WriteLine("Notable");
+                    break;
+                case 9:
+                case 10:
+                    Console.WriteLine("Excellent");
+                    break;
+                default:
+                    Console.WriteLine("Nieprawidłowa wartość");
+                    break;
+            }
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
