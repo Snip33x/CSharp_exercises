@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int a;
+
+            Console.WriteLine("Podaj liczbę: ");
+            a = int.Parse(Console.ReadLine());
+
+            if (a < 0)
+                Console.WriteLine("Liczba absolutna to: "+(-a));
+            else
+                Console.WriteLine("Liczba abosulnta to: " +a);
+
+            Console.ReadKey();
+
+        }
+    }
+}
