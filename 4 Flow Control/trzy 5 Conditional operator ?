@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("Podaj 1 liczbę: ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Podaj 2 liczbę: ");
+            int b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(
+                a> 0 ? "A is positive" : "A is not positive"
+            );
+
+            Console.WriteLine(
+                b > 0 ? "B is positive" : "B is not positive"
+            );
+
+            Console.WriteLine(
+                (a > 0) && (b> 0) ? "Both are positive" : "Not both are positive"
+                );
+            
+            Console.ReadKey();
+
+        }
+    }
+}
