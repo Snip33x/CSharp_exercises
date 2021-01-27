@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int number, divider = 2;
+
+            Console.WriteLine("Podaj 1 liczbę: ");
+            number = int.Parse(Console.ReadLine());
+
+            while (number % divider != 0)
+                divider++;
+            
+            if (divider == number)
+                Console.WriteLine("liczba jest pierwsza");
+            else
+                Console.WriteLine("To nie jest liczba pierwwsza");
+            
+            Console.ReadKey();
+        }   
+    }
+}
