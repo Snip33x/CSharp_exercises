@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int cena, zaplata, reszta;
+
+            
+
+            Console.WriteLine("Podaj 1 liczbę: ");
+            cena = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Podaj 2 liczbę: ");
+            zaplata = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            reszta = zaplata - cena;
+
+            while (reszta >= 50)
+            {
+                Console.WriteLine("50 ");
+                reszta -= 50;
+            }
+            while (reszta >= 20)
+            {
+                Console.WriteLine("20 ");
+                reszta -= 20;
+            }
+            while (reszta >= 10)
+            {
+                Console.WriteLine("10 ");
+                reszta -= 10;
+            }
+            while (reszta >= 5)
+            {
+                Console.WriteLine("5 ");
+                reszta -= 5;
+            }
+            while (reszta >= 2)
+            {
+                Console.WriteLine("2 ");
+                reszta -= 2;
+            }
+            while (reszta >= 1)
+            {
+                Console.WriteLine("1 ");
+                reszta -= 1;
+            }
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
