@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {  
+            Console.WriteLine("Wprowadz 1 liczbę ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Wprowadz 2 liczbę ");
+            int b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(
+                b == a ? "są równe" : "Nie są równe"
+            );
+            // to wyżej moje ale nie o to chodziło czy dwie są równe, ale o to czy obie są parzyste bądz nie parzyste
+            Console.WriteLine();
+
+            bool both = ((a % 2 == 0) && (b % 2 == 0)) ? true : false;
+            Console.WriteLine(both ? "Both" : "Odd");
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
