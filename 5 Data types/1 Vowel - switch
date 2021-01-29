@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int a;
+
+            Console.WriteLine("Podaj znak, cyfrę albo symbol: ");
+            a = char.Parse(Console.ReadLine());
+
+            //if (a == 'a' || a == 'e' || a == 'u' || a == 'i' || a == 'o' || a == 'y')
+            //    Console.WriteLine(a + " jest samogłoską");
+            //else if (a<10)
+            //    Console.WriteLine(a + " jest cyfrą");
+            //else
+            //    Console.WriteLine(a + " to inny symbol");
+
+            // to wyżej nie działa i jest jakieś dziwne, ale miałem pisać switchem - działa tylko z jednym charem
+            
+            switch(a)
+            {
+                case 'a':
+                case 'u':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'y':
+                    Console.WriteLine("Jest to mała litera samogłoski");
+                    break;
+
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    Console.WriteLine("To jest cyfra");
+                    break;
+                default:
+                    Console.WriteLine("to jest inny symbol");
+                    break;               
+            }
+            Console.ReadKey();
+        }
+    }
+}
