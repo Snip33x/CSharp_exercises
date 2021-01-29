@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+
+            Console.WriteLine("Wprowadz liczbę ");
+            int a = int.Parse(Console.ReadLine());
+
+            if (a != 0)
+            {
+                Console.Write("w systemie szesnastkowym ");
+                Console.WriteLine(Convert.ToString(a, 16));
+                Console.Write("Binary ");
+                Console.WriteLine(Convert.ToString(a,2));
+            }
+                
+
+            Console.ReadKey();
+        }
+    }
+}
