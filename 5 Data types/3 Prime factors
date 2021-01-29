@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int n;
+            int d = 2;
+
+            Console.WriteLine("Podaj znak, cyfrę albo symbol: ");
+            n = int.Parse(Console.ReadLine());
+
+            while (n > 1)
+            {
+                while (n % d == 0)
+                {
+                    Console.WriteLine(d);
+                    Console.WriteLine(" * ");
+                    n = n / d;
+                }
+
+                d++;
+            }
+            Console.Write(1);
+
+            Console.ReadKey();
+        }
+    }
+}
