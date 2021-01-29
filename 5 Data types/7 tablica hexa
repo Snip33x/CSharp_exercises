@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int k = 15;
+            Console.WriteLine("Wprowadz liczbę ");
+            int a = int.Parse(Console.ReadLine());
+
+            if (a != 0)
+            {
+                for (int i = 1; i < a; i++)
+                {
+                    Console.Write(" "+Convert.ToString(i, 16));
+                    
+                    //if (i == k) //mój pomysłek
+                    //{
+                    //    Console.WriteLine();
+                    //    k +=15;
+                    //}   
+
+                    if (i % 16 == 15)
+                        Console.WriteLine();
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
