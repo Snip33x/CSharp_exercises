@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        
+
+        public static void Main()
+        {  
+            Console.WriteLine("Wprowadz 1 liczbę ");
+            
+
+            try
+            {
+                int a = int.Parse(Console.ReadLine()); // nie szło mi bo int.Parse miałem poza blokiem try
+                Console.WriteLine(Math.Sqrt(a));
+            }
+            catch (FormatException) //można dać samo exception i wszystko wyrzucone
+            {
+                Console.WriteLine("lipa");               
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
