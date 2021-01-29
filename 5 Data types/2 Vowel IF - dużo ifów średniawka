@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int a;
+
+            Console.WriteLine("Podaj znak, cyfrę albo symbol: ");
+            a = char.Parse(Console.ReadLine());
+
+            if ((a == 'a') || (a == 'e') || (a == 'u') || (a == 'i') || (a == 'o') || (a == 'y')) // tu zapomniałem pobrać calychy porównań w nawiasy i dlatego miałem dziwne błędy
+                Console.WriteLine(" jest samogłoską");
+            else if ((a =='0') || (a == '1') || (a == '2') || (a == '3') || (a == '4') || (a == '5') || (a == '6') || (a == '7') || (a == '8') || (a == '9'))
+                Console.WriteLine(" jest cyfrą");
+            else
+                Console.WriteLine(" to inny symbol");
+
+            //to wyżej nie działa i jest jakieś dziwne, ale miałem pisać switchem
+
+
+            
+        Console.ReadKey();
+        }
+    }
+}
