@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cokolwiek
+{
+    public class Program
+    {
+        public static void Main()
+        {
+           
+            var litery = new Dictionary<int, string>(){
+                {1 , "B"},
+                {2 , "C"},
+                {3 , "D"},
+                {4 , "E"},
+                {5 , "F"},
+                {6 , "G"},
+                {7 , "H"},
+                {8 , "I"},
+                {9 , "J"},
+                {10 , "K"},
+                {11 , "L"},
+                {12, "M"},
+            };
+
+            foreach(var liczba in litery)
+                Console.Write("{0} ",liczba.Value);
+
+            Console.WriteLine();
+           
+            // o wiele prostszy sposób z apki, chary ogarnia pętla że lecą pokolei
+            
+            for (char i = 'B'; i <= 'N'; i++)
+                Console.Write("{0} ",i);
+            Console.ReadKey();
+        }
+    }
+}
