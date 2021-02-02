@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{		
+		Console.WriteLine("Podaj znak " );
+		char border = char.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Podaj szerokość " );
+		int width = int.Parse(Console.ReadLine());
+		
+		int i;
+		for ( i = 0; i < width; i++)
+			Console.Write(border);
+		
+		Console.WriteLine();
+		
+		for (i = 0; i < width - 2; i++) // po to żeby powstał kwadrat -2 - bo górę i dół mamy przecież
+		{
+			Console.Write(border);
+			
+			for (int j = 0; j <width - 2; j++) // jak jest for loop w for loopie to trzeba już dac inną zmienną np j
+				Console.Write(" ");
+			
+			Console.WriteLine(border);
+			
+		}
+		for ( i = 0; i < width; i++)
+			Console.Write(border);	
+	}
+}
