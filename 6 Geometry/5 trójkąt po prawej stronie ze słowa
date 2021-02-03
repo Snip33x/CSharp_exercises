@@ -1,0 +1,48 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{	
+		string name;
+		
+		Console.Write("Enter your name:  ");
+		name = Console.ReadLine();
+		
+		if (name.Length % 2 == 0) //.Lenght korzystamy z podpowiedzi stringa !!!  //bez tego błąd Index and length must refer to a location within the string.
+			name += " ";
+		
+		int position = name.Length -1  ;
+		int maxRows = name.Length ;
+		int amount = 1;
+		
+		for (int i = 0; i < maxRows; i++)
+		{
+			for( int j = 0; j < position; j++)
+				Console.Write(" ");
+			
+			Console.WriteLine(name.Substring(position, amount)); // substring to jest tak jakyby z excela fragment tekstu
+			position--;
+			amount ++;
+								
+		}
+		
+		Console.WriteLine("\n teraz druga metoda :)\n"); // nie działa nie wiem czemu jakaś dziwna
+		
+		Console.Write("Enter a text: ");
+		string text = Console.ReadLine();
+		string content = "";
+		int k = 1; // nie mogę zadeklarować j bo jest w for loopie w for loopie - myślałem że for deklaracja jest lokalna tylko dla loopa, bo mozna takiej samej użyć w innym loopie, ale nie jako samodzielna zmienna
+		for (int i = text.Length; i <= 0; i--)
+		{
+			for (int c = 0; c <= text.Length; c--)
+			{
+				Console.Write("_");
+				content = Convert.ToString(text.Substring(i, k));
+				k++;
+				Console.Write(content);
+			}
+			Console.WriteLine();	
+		}
+	}
+}
