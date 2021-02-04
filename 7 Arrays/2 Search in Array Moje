@@ -1,0 +1,57 @@
+using System;
+
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		string b;
+		do
+		{
+			int amount;
+
+			Console.Write("Podaj ile liczba będziesz wpisywał ");
+			amount = int.Parse(Console.ReadLine());
+
+			int [] numbers = new int[amount];
+
+			for (int i = 0 ; i < amount; i++)
+			{
+				Console.Write("Enter a number {0}: ", i +1);
+				numbers[i] = int.Parse(Console.ReadLine());
+			}
+			Console.Write("\nPodaj szukaną liczbę ");
+			int szukana = int.Parse(Console.ReadLine());
+
+			Console.WriteLine();
+			for (int i = 0; i < amount; i++)
+			{
+				if ( numbers[i] == szukana )
+				{
+					Console.WriteLine("The number {0} exist in list", szukana);
+					break;
+				}
+				if (numbers[i] != szukana)
+				{
+					Console.WriteLine("Nie ma tej liczby ");
+					break;
+				}
+				//else // ten else nie działa i cały czas wyrzuca ze nie ma liczby
+				//{
+					//Console.WriteLine("Nie ma tej liczby w liście");
+					//break;
+				//}
+			} 
+			Console.WriteLine();
+			
+			Console.WriteLine("Wpisz koniec aby zakończyć, bądź cokolwiek innego aby kontynuować: ");
+			b = Console.ReadLine();
+			
+				
+		} while (b != "koniec");
+		
+		Console.WriteLine("Papa");
+	}
+	
+}
