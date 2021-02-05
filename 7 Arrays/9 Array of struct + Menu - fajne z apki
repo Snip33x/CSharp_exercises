@@ -1,0 +1,70 @@
+using System;
+					
+public class Program
+{
+	struct points
+	{
+		public byte x;
+		public byte y;
+	}
+	
+	public static void Main()
+	{
+		points[] p = new points[1000];
+		bool Finish = false;
+		int countArray = 0;
+		int TotalX = 0;
+		int TotalY = 0;
+		do
+		{
+			Console.WriteLine("1 Add datat for one point");
+			Console.WriteLine("2 Display all the entered points");
+			Console.WriteLine("3 Calculate ( and diplay ) the average vales for x a nd y");
+			Console.WriteLine("0 Exit the program");
+			Console.Write("Entere a number");
+			byte respuesta = byte.Parse(Console.ReadLine());
+			
+			switch (respuesta)
+			{
+				case 1:
+					Console.WriteLine();
+					Console.Write("Enter a number for point x: ");
+					p[countArray].x = byte.Parse(Console.ReadLine()); // int nie działał tutaj , ale byte już tak ciekawe
+					TotalX += p[countArray].x;
+					Console.WriteLine();
+					Console.Write("Enter a number for point y: ");
+					p[countArray].y = byte.Parse(Console.ReadLine());
+					TotalY += p[countArray].y;
+					Console.WriteLine();
+					countArray++;
+					break;
+				case 2:
+					if (countArray > 0)
+					{
+						for (int i = 0; i < countArray; i++)
+						{
+							Console.WriteLine("Value x{0}: {1}", i +1, p[i].x);
+							Console.WriteLine("Value y{0}: {1}", i +1, p[i].y);
+						}
+					}
+					else
+						Console.WriteLine("Ni ma rekordów"); 
+					break;
+				case 3:
+					if (countArray >0)
+					{
+						Console.WriteLine("Average x: {0}", TotalX / countArray);
+						Console.WriteLine("Average y: {0}", TotalY / countArray);
+					}
+					else
+						Console.WriteLine("Empty");
+					break;
+				case 0:
+					Finish = true;
+					break;
+				default:
+					break;				
+			}	
+		} while (!Finish);	
+	}
+}
