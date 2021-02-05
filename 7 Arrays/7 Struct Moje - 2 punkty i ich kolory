@@ -1,0 +1,44 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int x1 =5 , y1 = 6;
+		byte r1 = 123, g1 = 233, b1 = 12;
+		
+		int x2 =6 , y2 = 3;
+		byte r2 = 12, g2 = 213, b2 = 123;
+		
+		Punkt2D pierwszy = new Punkt2D(x1,y1,r1,g1,b1);
+		
+		Punkt2D drugi = new Punkt2D(x2,y2,r2,g2,b2);
+		
+		Console.WriteLine("Pierwszy is located in ({0},{1}), colur ({2},{3},{4})", pierwszy.x ,pierwszy.y ,pierwszy.r ,pierwszy.g ,pierwszy.b);
+		Console.WriteLine("Drugi is located in ({0},{1}), colur ({2},{3},{4})", drugi.x ,drugi.y ,drugi.r ,drugi.g ,drugi.b);
+		
+	}
+
+	struct Punkt2D // jest mocno związana z intami i double
+	{
+		/*public static Punkt2D operator + (Punkt2D a, Punkt2D b) 
+		{
+			return new Punkt2D(a.x, a.y);
+		}	*/
+
+        public Punkt2D(int x, int y, byte r, byte g, byte b) // przykład że konstruktor może być w strukturach
+        {
+            this.x = x;
+            this.y = y;
+			this.r = r;
+			this.g = g;
+			this.b = b;
+        }		
+        public int x; //tu nie da się odrazu przypisać wartości do zmiennej, można to obejść poprzez const
+        public int y; 
+		public byte r;
+		public byte g;
+		public byte b;
+		
+	}	
+}
