@@ -38,12 +38,12 @@ public class Program
 		Console.WriteLine();
 		for (int i = 0; i < tab.GetLength(1); i++)
 		{
-			k = k + tab[1,i];
+			y = y + tab[1,i];
 			Console.Write(tab[1,i] + " ");
 			
 		}
 		Console.WriteLine();
-		Console.WriteLine("średnia dla pierwszej grupy wynosi {0}", k);
-		Console.WriteLine("średnia dla drugiej grupy wynosi {0}", y);
+		Console.WriteLine("średnia dla pierwszej grupy wynosi {0}", k/10);
+		Console.WriteLine("średnia dla drugiej grupy wynosi {0}", y/10);
 	}	
 }
