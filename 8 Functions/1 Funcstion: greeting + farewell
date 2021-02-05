@@ -1,0 +1,21 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		SayHello();
+		SayGoodbye();
+		
+	}
+	
+	public static void SayHello()
+	{
+		Console.WriteLine("Hello");
+	}
+	public static void SayGoodbye()
+	{
+		Console.WriteLine("Good Bye");
+	}	
+	
+}
