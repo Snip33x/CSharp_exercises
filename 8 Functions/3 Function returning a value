@@ -1,0 +1,28 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace totolotken
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+            int z = 3;
+            int k = 5;
+
+            Console.WriteLine(Sum(z, k));
+
+            Console.ReadKey();
+        }
+
+        private static int Sum(int x, int y)
+        {
+            int result;
+            result =  x + y;
+            return result;
+        }
+    }
+}
