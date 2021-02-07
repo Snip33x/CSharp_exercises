@@ -1,0 +1,31 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace totolotken
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			sayHello("John");
+			SayGoodbye();
+
+            Console.ReadKey();
+        }
+
+        private static void SayGoodbye()
+        {
+            Console.WriteLine("Good Bye");
+        }
+
+        private static void sayHello(string v)
+        {
+            Console.WriteLine("Hello " + v);
+        }
+
+        
+    }
+}
