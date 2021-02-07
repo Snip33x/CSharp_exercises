@@ -1,0 +1,46 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Diagnostics;
+
+namespace totolotken
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+			Console.WriteLine("\"Hello, how are you\" contains {0} spaces", CountSpaces("Hello, how are you"));
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedTicks);
+            stopwatch.Reset();
+            stopwatch.Start();
+            Console.WriteLine("\"Hello, how are you\" contains {0} spaces", CountSpaces2("Hello, how are you"));
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedTicks);
+            Console.ReadKey();
+        }
+
+        private static int CountSpaces(string v)
+        {
+            return v.Count(Char.IsWhiteSpace);       
+        }
+
+        private static int CountSpaces2(string v)
+        {
+            int countSpaces = 0;
+            string letter;
+            for (int i = 0; i < v.Length; i++)
+            {
+                letter = v.Substring(i, 1);
+                if (letter == " ")
+                    countSpaces++;
+            }
+            return countSpaces;
+        }
+    }
+}
