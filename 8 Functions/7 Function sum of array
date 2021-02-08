@@ -1,0 +1,24 @@
+using System;
+					
+public class Program
+{
+	
+	public static int Sum(int[] lista)
+	{
+		//int[] myIntArray = new int[4] { a, b, c, d}; źle
+		int suma = 0;
+		foreach (var a in lista)  // w apce zwykłym forem i<lista.Length
+		{
+			suma += a;
+		}
+		return suma;
+	}
+	
+	public static void Main()
+	{
+		
+		int[] example = {20,10,5,2};
+		
+		Console.WriteLine("The sum of the example array is {0}", Sum(example));
+	}
+}
