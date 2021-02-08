@@ -20,7 +20,7 @@ namespace totolotken
 			Console.ReadKey();
         }
 
-		public static void ChangeChar(ref string text, int position, char letter)
+		public static void ChangeChar(ref string text, int position, char letter) // jak nie będzie referencyjny string to nie pójdzie mmmmm
         {
 			text = text.Remove(position, 1);
 			text = text.Insert(position, letter.ToString());
