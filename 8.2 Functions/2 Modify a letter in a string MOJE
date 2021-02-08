@@ -1,0 +1,44 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Diagnostics;
+
+namespace totolotken
+{
+	class Program
+	{
+
+		
+
+		static void Main(string[] args)
+		{
+			ChangeChar("Hystfusia 3gp");
+        }
+
+		public static void ChangeChar(string a)
+        {
+			
+			Console.WriteLine(a);
+			Console.WriteLine("Podaj indeks literki którą chcesz wymienić");
+			int indexWyrzucany = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("Podaj jaką literkę chcesz tam wsadzić");
+			string literka = Console.ReadLine();
+
+
+			string b, c;
+			c = a.Remove(indexWyrzucany, 1); // muszę go posyłac w nową zmienną żeby mi zadziałał
+
+			b = c.Insert(indexWyrzucany, literka);
+
+			Console.WriteLine(b);
+
+			Console.ReadKey();
+
+		}
+
+
+    }
+}
