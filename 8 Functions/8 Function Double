@@ -1,0 +1,21 @@
+using System;
+					
+public class Program
+{
+	
+	public static int Double(int liczba)
+	{
+		//int[] myIntArray = new int[4] { a, b, c, d}; źle
+		//liczba = liczba*liczba; moje długie ale działa
+		return liczba*liczba;
+	}
+	
+	public static void Main()
+	{
+		Console.WriteLine("Podaj liczbę ");
+		int x;
+		x = int.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Double of {0} is {1}", x, Double(x));
+	}
+}
