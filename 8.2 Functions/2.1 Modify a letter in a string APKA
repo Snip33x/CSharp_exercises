@@ -1,0 +1,31 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Diagnostics;
+
+namespace totolotken
+{
+	class Program
+	{
+
+		
+
+		static void Main(string[] args)
+		{
+			string sentence = "Bread";
+			ChangeChar(ref sentence, 2, 'a');
+            Console.WriteLine(sentence);
+			Console.ReadKey();
+        }
+
+		public static void ChangeChar(ref string text, int position, char letter)
+        {
+			text = text.Remove(position, 1);
+			text = text.Insert(position, letter.ToString());
+		}
+
+
+    }
+}
