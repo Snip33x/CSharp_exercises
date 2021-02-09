@@ -1,0 +1,23 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine(SumDigits(999999));
+	}
+	
+	public static int SumDigits(int liczba)
+	{
+		string number = Convert.ToString(liczba);
+		
+		int sum = 0;
+		
+		for (int i = 0; i <number.Length; i++)
+			sum += Convert.ToInt32(number.Substring(i, 1));  // SUBSTRING LENGHT W DRUGIM PARAMETRZE W PRZECIĄŻENIU TO NIE DŁUGOŚĆ CAŁEGO TEKSTU, TYLKO ILE LITER CHCESZ ŻEBY ODDAŁ
+		return sum;
+		
+		
+	}
+	
+}
