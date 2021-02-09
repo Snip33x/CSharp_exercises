@@ -1,0 +1,30 @@
+using System;
+					
+public class Program
+{
+	public static bool IsPrime(int n)
+	{
+		for (int i =2; i <n; i++)
+			if (n % i == 0)
+				return false;
+		return true;
+	}
+	
+	public static int[] allPrimes(int zakres)
+	{
+		int[] primes = new int[] {2};
+		for (int i = 2; i < zakres + 1; i++)
+			if (IsPrime(i) == true)
+				
+		return primes;		
+	}
+	
+	public static void Main()
+	{
+		if (IsPrime(7))
+			Console.WriteLine("Prime");
+		else
+			Console.WriteLine("Not Prime");
+		
+	}
+}
