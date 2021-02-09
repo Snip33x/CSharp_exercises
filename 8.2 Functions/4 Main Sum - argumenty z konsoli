@@ -1,0 +1,15 @@
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+
+		if ( args.Length == 2)
+			Console.WriteLine(Convert.ToInt32(args[0]) + Convert.ToInt32(args[1]));
+		else
+		{
+			Console.WriteLine("Enter two params");
+		}			
+	}
+}
