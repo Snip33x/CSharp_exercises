@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Table tablicka = new Table(10, 5);
+		Console.WriteLine(tablicka.width);
+		tablicka.ShowData();
+		
+		Console.WriteLine();
+		
+		Table[] myTables = new Table[10];
+		Random rnd = new Random();
+		
+		for (int i = 0; i < 10; i++)
+		{	
+			myTables[i] = new Table(rnd.Next(50,201), rnd.Next(50,201));
+			Console.Write("Tablica nr {0} ", i+1);
+			myTables[i].ShowData();
+		}
+	}
+}
+
+public class Table
+{
+	public int width;  // to dwie trzeba tu zadeklarować żeby móc zrobić tablicka.width
+	public int height;
+	
+	public Table(int szerokosc, int wysokosc)
+	{
+		width = szerokosc;
+		height = wysokosc;
+	}
+	
+	public void ShowData()
+	{
+		Console.WriteLine("Szerokość {0} wysokość {1}", width, height);
+		
+	}
+}
