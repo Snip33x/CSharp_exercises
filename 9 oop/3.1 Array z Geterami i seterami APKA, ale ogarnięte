@@ -1,0 +1,63 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Table tablicka = new Table(10, 5);
+		//Console.WriteLine(tablicka.width);
+		tablicka.ShowData();
+		
+		Console.WriteLine();
+		
+		Table[] myTables = new Table[10];
+		Random rnd = new Random();
+		
+		for (int i = 0; i < 10; i++)
+		{	
+			myTables[i] = new Table(rnd.Next(50,201), rnd.Next(50,201));
+			Console.Write("Tablica nr {0} ", i+1);
+			myTables[i].ShowData();
+		}
+	}
+}
+
+public class Table
+{
+	private float width;  // to dwie trzeba tu zadeklarować żeby móc zrobić tablicka.width
+	public float height;
+	
+	public Table()
+	{
+	}
+	
+	public Table(float szerokosc, float wysokosc)
+	{
+		this.Width = szerokosc;
+		this.height = wysokosc;
+	}
+	
+	public float Width   // nie działało mi bo zwracałem w wielu miejscach width z małej literki a czyli nie to co chciałem
+	{
+		set 
+		{
+			if (value < 70) // dopiero jak zajedzie ten warunek to wyświetlamy wartości
+				width = value;
+			else
+				width = 50;
+		}
+		get { return width; }
+	}
+	
+	public float Height
+	{
+		set {height = value; }
+		get { return height; }
+	}
+	
+	public void ShowData()
+	{
+		Console.WriteLine("Szerokość {0} wysokość {1}", Width, height);
+		
+	}
+}
