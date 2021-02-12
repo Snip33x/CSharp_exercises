@@ -1,0 +1,133 @@
+using System;
+
+
+class House
+{
+
+
+    public House()
+    {
+
+    }
+    public House(int area)  //XX1 o ten hmm
+    {
+        this.area = area;
+    }
+
+    private int area;
+
+    public int Area
+    {
+        get { return area; }
+        set { area = value; }
+    }
+
+    private Door door; // cosz to jest
+    public Door Door
+    {
+        get { return door; }
+        set { door = value; }
+    }
+
+    public virtual void ShowData()
+    {
+        Console.WriteLine("I am a house, my area is {0} m2", Area);
+    }
+
+}
+
+class Door
+{
+    public Door()
+    {
+        color = "Brown";
+    }
+    public Door(string color)
+    {
+        this.color = color;
+    }
+    public void ShowData()
+    {
+        Console.WriteLine("I am a door, my color is {0}", Color);
+    }
+    private string color;
+
+    public string Color
+    {
+        get { return color; }
+        set { color = value; }
+    }
+}
+
+class SmallApartment : House
+{
+    public SmallApartment()
+        : base(50)  // XX1 tutaj żeby dać base musiałem zrobić House przyjmującym jeden argument int 
+    {
+
+    }
+    public override void ShowData()
+    {
+        Console.WriteLine("I am an aparment, my area is " + Area + " m2"); //apka mówi że mała area
+    }
+}
+
+class Person
+{
+    private string name;
+    private House house;
+
+    public Person()
+    {
+        name = "Kluś";
+        house = new House(150);
+    }
+    public Person(string name, House house)
+    {
+        this.name = name;
+        this.house = house;
+    }
+    
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+    public House House
+    {
+        get { return house; }
+        set { house = value; }
+    }
+    public void ShowData()
+    {
+        Console.WriteLine("My name is {0}.", Name); // mały name?
+        house.ShowData();
+        house.Door.ShowData();
+    }
+
+}
+
+class TestHouse
+{
+    public static void Main()
+    {
+        //House domek = new House();
+        //domek.Area = 59;
+        //domek.ShowData();
+
+        SmallApartment smallApartment = new SmallApartment();
+        Person person = new Person();
+
+        person.Name = "Klusieczek";
+        person.House = smallApartment;
+        person.ShowData();
+        Door door = new Door();
+        door.Color = "żółty";
+        door.ShowData();
+
+        Console.ReadKey();
+
+    }
+}
