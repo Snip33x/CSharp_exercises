@@ -9,7 +9,7 @@ class House
     {
 
     }
-    public House(int area)  //XX1 o ten hmm
+    public House(int area)  //XX1 o ten hmm kl
     {
         this.area = area;
     }
